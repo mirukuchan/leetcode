@@ -1,11 +1,8 @@
 package questions;
 
-import java.io.*;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import utils.leetCodeParser;
-import utils.datastructure.*;
 
 public class populating_Next_Right_Pointers_in_Each_Node_II{
 
@@ -57,49 +54,12 @@ public class populating_Next_Right_Pointers_in_Each_Node_II{
     //     traverse(root.right);
     //     return;
     // }
-
-    public static void main(final String args[]){
-        try {
-            File f = new File("questions/input.txt");
-            if(f.isFile() && f.exists()){
-                BufferedReader bufferedreader = new BufferedReader(new FileReader(f));
-                FileWriter writer = new FileWriter("questions/output.txt");
-                BufferedWriter bufferedwriter = new BufferedWriter(writer);
-                String line = null;
-                while(( line = bufferedreader.readLine()) != null){
-                    // run()
-                    BiNode root = new BiNode();
-                    root = leetCodeParser.bTree(line);
-                    bufferedwriter.write(line + "\r\n");
-
-                }
-                bufferedreader.close();
-                bufferedwriter.close();
-            }
-
-        } catch(Exception e){
-            e.printStackTrace();
-        } 
-    }
-
     private class Node {
         public int val;
         public Node left;
         public Node right;
         public Node next;
-    
-        public Node() {}
-        
-        public Node(final int _val) {
-            val = _val;
-        }
-    
-        public Node(final int _val, final Node _left, final Node _right, final Node _next) {
-            val = _val;
-            left = _left;
-            right = _right;
-            next = _next;
-        }
+
     };
 }
 

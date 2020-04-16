@@ -21,22 +21,22 @@ class product_of_array_except_self {
         return result;
     }
 
-    public static void main(String args[]){
-        try{
-            File file = new File("questions/input.txt");
-            Scanner in = new Scanner(file);
-            PrintWriter out = new PrintWriter("questions/output.txt");
-            while(in.hasNextLine()){
-                String line = in.nextLine();
-                int[] input = leetCodeParser.array1d(line);
-                int[] result = productExceptSelf(input);
-                for(int i : result) out.println(i);
-                out.println("\n");
-            }
-            in.close();
-            out.close();
-        } catch(Exception e){
-            e.printStackTrace();
-        }
-    }
+    // public static void main(String args[]){
+    //     try{
+    //         File file = new File("questions/input.txt");
+    //         Scanner in = new Scanner(file);
+    //         PrintWriter out = new PrintWriter("questions/output.txt");
+    //         while(in.hasNextLine()){
+    //             String line = in.nextLine();
+    //             int[] input = leetCodeParser.array1d(line);
+    //             int[] result = productExceptSelf(input);
+    //             for(int i : result) out.println(i);
+    //             out.println("\n");
+    //         }
+    //         in.close();
+    //         out.close();
+    //     } catch(Exception e){
+    //         e.printStackTrace();
+    //     }
+    // }
 }
