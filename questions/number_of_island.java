@@ -10,7 +10,6 @@ public class number_of_island {
     public int numIslands(char [][] grid){
         if(grid == null || grid.length == 0) return 0;
         r_len = grid.length;
-        c_len = grid[0].length;
         int res = 0;
 
         Queue<Integer> q = new LinkedList<>();
